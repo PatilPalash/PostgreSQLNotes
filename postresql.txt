@@ -1,0 +1,114 @@
+postresql
+
+1) add this path in env C:\Program Files\PostgreSQL\16\bin
+user variable.
+2) open cmd and type 
+psql -U postgres- its ask 
+Password for user postgres:Abcd@123
+
+List down existing databases
+SELECT datname FROM pg_database;
+\l
+
+Some Important Queries in starting
+\l - list all databases
+\q - quit
+\c db_name - connect to database
+\dt - list all tables
+\d tb_name - describe a table (if table name in update or camel 	     case write in " ")
+\d+ tb_name - list all column
+\! cls.- list all column
+
+INSERTING Data
+Adding data into a Table
+
+single 
+INSERT INTO person(id, name, city)
+VALUES (101,‘Raju’,‘Delhi’);
+
+multiple
+INSERT INTO person(id, name, city)
+VALUES (101,‘Raju’,‘Delhi’),
+(102,‘kaju’,‘pelhi’);
+
+we can update like this also
+INSERT INTO person
+VALUES (103,‘alex’,‘pune’);
+
+READING DATA
+Reading data f rom a Table
+
+select * from person;
+select name from person;
+
+to read multiple coloums
+select name, city from person;
+
+UPDATING DATA
+Modify/Update data f rom a Table
+UPDATE person
+SET city=’London’
+WHERE id=2;
+
+DELETING DATA
+DELETE data f rom a Table
+DELETE FROM person
+WHERE id=101
+
+Draw Back of current structure
+INSERT INTO person(id, name, city)
+VALUES (100,‘Raju’,‘Delhi’),
+(102,‘kaju’,‘’);
+
+__________________________________________
+
+Constraints are like a rule, by defining that, that allows us to validate the input data before storing that in the database. Constraints can be defined when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+
+What are the 7 constraints in SQL?
+Primary Key, Foreign Key, NOT NULL, UNIQUE, CHECK, DEFAULT, INDEX
+
+In PostgreSQL (and SQL in general), a clause is a part of an SQL statement that defines specific behavior or conditions. Clauses are like building blocks of SQL queries.
+
+✅ Common Clauses in PostgreSQL:
+Clause	Description
+SELECT	Retrieves data from a table
+FROM	Specifies the table(s) to query
+WHERE	Filters rows based on conditions
+GROUP BY	Groups rows that share a value (used with aggregate functions)
+HAVING	Filters groups after GROUP BY (like WHERE but for groups)
+ORDER BY	Sorts the result by one or more columns
+LIMIT	Limits the number of rows returned
+OFFSET	Skips a number of rows before returning data
+JOIN	Combines rows from multiple tables
+ON	Specifies join condition
+AS	Renames a column or table in a query (alias)
+DISTINCT	Removes duplicate rows in SELECT output
+INSERT INTO	Adds new rows to a table
+VALUES	Specifies the data to insert
+UPDATE	Modifies existing data in a table
+SET	Specifies which columns to change in UPDATE
+DELETE FROM	Removes rows from a table
+RETURNING	Returns values after INSERT, UPDATE, or DELETE
+INTO	Specifies a new table for SELECT INTO queries
+EXISTS	Tests for the existence of rows
+
+🔍 Example Query with Clauses:
+sql
+SELECT name, city         -- SELECT clause
+FROM person               -- FROM clause
+WHERE city = 'Nagpur'     -- WHERE clause
+ORDER BY name ASC         -- ORDER BY clause
+LIMIT 5;                  -- LIMIT clause
+🧠 Tip:
+Every SQL statement is made of clauses. Understanding clauses helps you write and read queries more clearly.
+
+Let me know if you want examples of specific clauses or how to use them in real queries.
+
+
+
+
+
+
+
+
+
