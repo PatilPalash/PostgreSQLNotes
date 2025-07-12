@@ -1,6 +1,6 @@
 
 ---
-*****************************************************************
+____________________________________________________________________________________________
 ---
 Here's a **structured breakdown** of the YouTube video:
 📺 [**Master MySQL in ONE VIDEO 2025 (MPrashant)**](https://youtu.be/Hy3qbMAoEJk?si=VzQS-f_USMRDdd1d)
