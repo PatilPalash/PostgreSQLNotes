@@ -149,4 +149,54 @@ SELECT * FROM teachers;
 
 ---
 
-Would you like a PDF of this note or a printable sheet with syntax + practice blocks?
+---
+Here are clear and concise answers for your questions:
+
+---
+
+### **1. What is the difference between DBMS and RDBMS?**
+
+| Feature           | DBMS (Database Management System)               | RDBMS (Relational Database Management System)           |
+| ----------------- | ----------------------------------------------- | ------------------------------------------------------- |
+| **Data Storage**  | Stores data as files or in navigational formats | Stores data in **tables (rows and columns)**            |
+| **Relationships** | No support for relationships between data       | Supports **relationships using foreign keys and joins** |
+| **Normalization** | Doesn't enforce normalization                   | Supports and enforces **data normalization**            |
+| **Examples**      | Microsoft Access, File System                   | MySQL, PostgreSQL, SQL Server, Oracle                   |
+| **Concurrency**   | Limited support for multiple users              | Designed to handle **multiple users simultaneously**    |
+
+---
+
+### **2. List 3 advantages of using a database over storing data in Excel**
+
+1. **Data Integrity and Validation:**
+   Databases enforce **data types, constraints, and rules**, ensuring more accurate and consistent data.
+
+2. **Concurrency and Multi-user Support:**
+   Databases allow **multiple users to access and update data simultaneously** without conflicts.
+
+3. **Scalability and Querying Power:**
+   Databases handle **large datasets efficiently** and support complex **queries (SQL)** for powerful data retrieval and reporting.
+
+---
+
+### **3. Explain how tables are related in RDBMS**
+
+In an **RDBMS**, tables are related using **keys**:
+
+* A **Primary Key** uniquely identifies each record in a table.
+* A **Foreign Key** is a field in one table that refers to the **Primary Key** in another table.
+
+This relationship allows:
+
+* **Referential integrity** (data consistency across tables)
+* Performing **JOIN operations** to retrieve related data from multiple tables.
+
+**Example:**
+
+* `Customers` table → `CustomerID` (Primary Key)
+* `Orders` table → `CustomerID` (Foreign Key referencing Customers)
+
+This shows which customer placed each order.
+
+---
+
